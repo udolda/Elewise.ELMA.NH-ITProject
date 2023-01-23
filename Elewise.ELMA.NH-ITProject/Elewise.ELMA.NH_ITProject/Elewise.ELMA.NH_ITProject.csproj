@@ -35,9 +35,16 @@
       <HintPath>D:\Documents\Установочники\ELMA3-Plugin\Extensions\Visual Studio2017\DesignerBin\EleWise.ELMA.SDK.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="EleWise.ELMA.Security">
+      <HintPath>D:\Documents\Установочники\ELMA3-Plugin\Extensions\Visual Studio2017\DesignerBin\EleWise.ELMA.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>D:\Documents\Установочники\ELMA3-Plugin\Extensions\Visual Studio2017\DesignerBin\Iesi.Collections.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\..\..\Установочники\ELMA3-Plugin\Extensions\Visual Studio2017\DesignerBin\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -54,6 +61,10 @@
       <Generator>MDCodeGenerator</Generator>
       <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
+    <None Include="Models\ITProject.md">
+      <Generator>MDCodeGenerator</Generator>
+      <LastGenOutput>ITProject.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Elewise.ELMA.NH_ITProject.nuspec" />
   </ItemGroup>
   <ItemGroup>
@@ -62,13 +73,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.md</DependentUpon>
     </Compile>
+    <Compile Include="Managers\ITProjectMAnager.cs" />
+    <Compile Include="Models\ITProject.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ITProject.md</DependentUpon>
+    </Compile>
     <Compile Include="ProjectAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Managers\" />
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
